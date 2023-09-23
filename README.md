@@ -20,3 +20,8 @@ Introducing Garage: the ultimate car management app. Easily track and catalog yo
 | /garage |	POST | receive info from new form & create new car entry in database|
 | /garage/:id |	GET | render page with the car entry
 ERD|
+
+
+## Mockup 
+![Mockup](https://i.imgur.com/gE6YcDv.png)
+- [Free Mockup Tool](https://imgur.com/)

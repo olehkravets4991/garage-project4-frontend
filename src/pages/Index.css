@@ -1,85 +1,125 @@
 /* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background image to the body */
 body {
-    background-image: url("https://i.imgur.com/jGGslgp.png");
-    font-family: Arial, sans-serif;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 20px;
-  }
+  background-image: url("https://i.imgur.com/jGGslgp.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
 
-
+/* Create a responsive container for content */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .heading {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #04f510;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .post-container {
-    margin-top: 20px;
-  }
-  
-  h1 {
-    color: #ff7b00;
+  max-width: 800px; /* Adjust the max width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent background */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
 
+/* Style the page heading */
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333; /* Adjust the text color */
+}
+
+/* Style the form for adding a car */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style the input fields */
+.input {
+  width: calc(33.33% - 10px); /* Adjust the width as needed */
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #04f510;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the button for creating a new car */
+.btn {
+  background-color: #007bff;
+  color: #f7df06;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth hover effect */
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style the post container for displaying cars */
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Style individual car posts */
+.post {
+  flex-basis: calc(33.33% - 10px); /* Adjust the width as needed */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff; /* Add a white background for each post */
+  transition: transform 0.2s ease-in-out; /* Add a subtle scale effect on hover */
+}
+
+.post:hover {
+  transform: scale(1.05);
+}
+
+/* Style the h1 and h2 elements with custom colors */
+h1 {
+  color: #ff7b00;
+}
+
+h2 {
+  color: #ff9900;
+}
+
+/* Style placeholder text */
+.placeholder {
+  color: #04f510;
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%; /* Use full width on smaller screens */
+    border-radius: 0; /* Remove rounded corners */
   }
 
-  h2 {
-    color: #ff9900;
+  .form .input {
+    width: 100%; /* Use full width for input fields */
   }
 
-  .placeholder {
-    color:#04f510
+  .post {
+    flex-basis: 100%; /* Use full width for individual posts on smaller screens */
   }
-
-  .form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .input {
-    width: calc(33.33% - 10px); /* Adjust the width as needed */
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #04f510;
-    border-radius: 5px;
-    font-size: 16px;
-  }
+}

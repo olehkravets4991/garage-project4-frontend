@@ -1,4 +1,5 @@
 import { Link, useLoaderData, Form } from "react-router-dom";
+import './Index.css';
 
 function Show(props) {
   const post = useLoaderData();
@@ -9,6 +10,7 @@ function Show(props) {
     width: "80%",
     margin: "30px auto",
   };
+
 
   return (
     <div style={div}>
